@@ -22,9 +22,13 @@ int main() {
     std::cin.get();
 
     // setting finished flag to true
+    std::cout << "setting finished flag to true\n";
     finished = true;
     
+    // block main execution until thread1 finishs
     thread1.join();
+
+    std::cout << "thread1 finished (joind main stream)\n";
 
     return 0;
 }
